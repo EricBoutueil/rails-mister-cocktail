@@ -1,18 +1,14 @@
-<p id="notice"><%= notice %></p>
-
 <div class="container">
   <div class="row">
-    <h1>Restaurants</h1>
+    <h1>cocktails</h1>
   </div>
   <div class="row">
-    <% @restaurants.each do |resto| %>
+    <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= resto.image_url %>');">
+        <div class="card">
           <div class="card-description">
-            <h2><%= resto.name %></h2>
-            <p><%= resto.address %></p>
+            <h2><%= cocktail.name %></h2>
           </div>
-          <%= link_to '', resto, class:"card-link" %>
         </div>
       </div>
     <% end %>
@@ -20,4 +16,4 @@
 </div>
 
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= link_to 'New cocktail', new_cocktail_path %>
